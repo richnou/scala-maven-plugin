@@ -19,7 +19,7 @@ import java.util.Locale;
  *
  * @goal doc
  * @requiresDependencyResolution compile
- * @execute phase="generate-sources"
+ * 
  */
 public class ScalaDocMojo extends ScalaSourceMojoSupport implements MavenReport {
 
