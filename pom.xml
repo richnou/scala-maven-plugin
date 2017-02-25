@@ -17,6 +17,27 @@
 	<inceptionYear>2012</inceptionYear>
 	<description>The scala-maven-plugin (previously maven-scala-plugin) is used for compiling/testing/running/documenting scala code of any maven project.</description>
 
+    
+     <!-- Site && Artifacts Distribution -->
+    <!-- ################# -->
+    <distributionManagement>
+        <site>
+          <id>odfi.central</id>
+          <url>scpexe://cd@deploy.opendesignflow.org/cd/maven/sites/${project.groupId}/${project.artifactId}/</url>
+        </site>
+        <repository>
+            <id>odfi.central</id>
+            <name>ODFI Public Release Repository</name>
+            <url>https://www.opendesignflow.org/maven/repository/internal/</url>
+        </repository>
+        <snapshotRepository>
+            <id>odfi.snapshot</id>
+            <name>ODFI Public Snapshot Repository</name>
+            <url>https://www.opendesignflow.org/maven/repository/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+
 	<licenses>
 		<license>
 			<name>Public domain (Unlicense)</name>
