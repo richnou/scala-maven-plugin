@@ -9,7 +9,7 @@
 
 	<groupId>net.alchim31.maven</groupId>
 	<artifactId>scala-maven-plugin</artifactId>
-	<version>3.2.3.odfi-SNAPSHOT</version>
+	<version>3.2.3</version>
 	<packaging>maven-plugin</packaging>
 
 	<name>scala-maven-plugin</name>
