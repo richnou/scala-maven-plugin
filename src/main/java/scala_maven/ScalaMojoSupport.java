@@ -32,6 +32,8 @@ import org.apache.maven.shared.dependency.tree.traversal.DependencyNodeVisitor;
 import org.apache.maven.shared.dependency.tree.traversal.FilteringDependencyNodeVisitor;
 import org.apache.maven.toolchain.ToolchainManager;
 import org.codehaus.plexus.util.StringUtils;
+import org.eclipse.aether.artifact.DefaultArtifact;
+
 import scala_maven_dependency.CheckScalaVersionVisitor;
 import scala_maven_dependency.ScalaDistroArtifactFilter;
 import scala_maven_executions.JavaMainCaller;
@@ -44,6 +46,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
@@ -300,6 +303,7 @@ public abstract class ScalaMojoSupport extends AbstractMojo {
     /**
      * Should use CanonicalPath to normalize path (true => getCanonicalPath, false => getAbsolutePath)
      * @see <a href="https://github.com/davidB/maven-scala-plugin/issues/50">https://github.com/davidB/maven-scala-plugin/issues/50</a>
+     * 
      * @parameter property="maven.scala.useCanonicalPath" default-value="true"
      */
     protected boolean useCanonicalPath = true;
@@ -367,7 +371,14 @@ public abstract class ScalaMojoSupport extends AbstractMojo {
      */
     protected ToolchainManager toolchainManager;
 
-    /** @parameter default-value="${plugin.artifacts}" */
+    
+    
+    /** 
+     * 
+     * 
+     * @parameter  default-value="${plugin.artifacts}" 
+     * @readonly
+     */
     private List<Artifact> pluginArtifacts;
 
     private VersionNumber _scalaVersionN;

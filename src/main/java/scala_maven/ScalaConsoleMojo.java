@@ -49,7 +49,7 @@ public class ScalaConsoleMojo extends ScalaMojoSupport {
      * Path of the javaRebel jar. If this option is set then the console run
      * with <a href="http://www.zeroturnaround.com/javarebel/">javarebel</a> enabled.
      *
-     * @parameter property="javarebel.jar.path"
+     * @parameter property="javarebel.jar.path" default-value="null"
      */
     protected File javaRebelPath;
 

@@ -10,4 +10,4 @@ public class BasicArtifact {
     public String toString() {
         return "BasicArtifact(" + groupId + "," + artifactId + "," + version + "," + classifier + ")";
     }
-}
+} 
